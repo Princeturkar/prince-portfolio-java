@@ -1,1 +1,1 @@
-https://prince-new-portfolio-website.vercel.app/
+https://prince-portfolio-java.vercel.app/
