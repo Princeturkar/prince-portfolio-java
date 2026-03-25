@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prince | Portfolio</title>
+    <!-- Sora Font for Headings, Inter for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Page Loader -->
+    <div id="page-loader">
+      <div class="loader-logo">Prince.</div>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer-overlay" id="drawer-overlay"></div>
+    <div class="mobile-drawer" id="mobile-drawer">
+      <div class="drawer-header">
+        <span class="drawer-logo">Prince.</span>
+        <button class="drawer-close" id="drawer-close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="#hero"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#about"><i class="fa-solid fa-user"></i> About</a>
+        <a href="#projects"><i class="fa-solid fa-code"></i> Projects</a>
+        <a href="#experience"><i class="fa-solid fa-briefcase"></i> Experience</a>
+        <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+      </nav>
+      <div class="drawer-footer">
+        <p style="font-size:0.8rem;color:var(--text-muted)">Find me on</p>
+        <div class="drawer-social">
+          <a href="https://github.com/Princeturkar" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/prince-turkar" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:princeturkar1@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" title="Back to Top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <div id="progress"></div>
+    <div id="app"></div>
+
+    <!-- AI Chatbot UI -->
+    <div id="ai-chatbot">
+      <div class="chatbot-header">
+        <div class="bot-info">
+          <div class="bot-icon"><i class="fa-solid fa-robot"></i></div>
+          <span>Prince's AI Assistant</span>
+        </div>
+        <button id="close-chatbot"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div id="chatbot-messages">
+        <div class="message bot-message">Hi! I'm Prince's AI assistant. Ask me anything about his projects, skills, or experience!</div>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" id="chat-input" placeholder="Type a message...">
+        <button id="send-chat"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </div>
+    <button id="chatbot-toggle"><i class="fa-solid fa-comment-dots"></i></button>
+    
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (typeof AOS !== 'undefined') {
+          AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
